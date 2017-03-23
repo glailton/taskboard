@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var estoria_mock_1 = require('./estoria.mock');
+var tarefas_mock_1 = require('./tarefas.mock');
 var AcervoComponent = (function () {
     function AcervoComponent() {
     }
     AcervoComponent.prototype.ngOnInit = function () {
         this.acervo = estoria_mock_1.ACERVO;
+        this.tarefas = tarefas_mock_1.TAREFAS;
     };
     AcervoComponent = __decorate([
         core_1.Component({

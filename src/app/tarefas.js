@@ -1,8 +1,8 @@
 "use strict";
-var Tarefa = (function () {
-    function Tarefa() {
+var Tarefas = (function () {
+    function Tarefas() {
     }
-    return Tarefa;
+    return Tarefas;
 }());
-exports.Tarefa = Tarefa;
+exports.Tarefas = Tarefas;
 //# sourceMappingURL=tarefas.js.map

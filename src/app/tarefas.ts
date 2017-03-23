@@ -1,3 +1,4 @@
-export class Tarefa {
+export class Tarefas {
     titulo: string;
+    descricao: string;
 }

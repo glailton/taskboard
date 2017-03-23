@@ -1,17 +1,17 @@
 "use strict";
 exports.ACERVO = [
     {
-        "titulo": "Tarefa 1",
+        "titulo": "Estoria 1",
         "descricao": "Estudar",
         "pontos": 5
     },
     {
-        "titulo": "Tarefa 2",
+        "titulo": "Estoria 2",
         "descricao": "Dormir",
         "pontos": 100
     },
     {
-        "titulo": "Tarefa 3",
+        "titulo": "Estoria 3",
         "descricao": "Trabalhar",
         "pontos": 10
     }
