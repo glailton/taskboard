@@ -9,18 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.titulo = "TaskBoard";
+var estoria_service_1 = require('./estoria.service');
+var EstoriaComponent = (function () {
+    function EstoriaComponent(estoriaService) {
+        this.estoriaService = estoriaService;
     }
-    AppComponent = __decorate([
+    EstoriaComponent.prototype.ngOnInit = function () {
+        this.estorias = this.estoriaService.getEstorias();
+    };
+    EstoriaComponent = __decorate([
         core_1.Component({
-            selector: 'meu-app',
-            template: "\n      <nav>\n        <div class=\"nav-wrapper\">\n          <a class=\"brand-logo center\">{{titulo}}</a>          \n        </div>\n      </nav>\n      <div class=\"container\">\n        <estoria></estoria>\n      </div>",
+            selector: 'estoria',
+            templateUrl: 'app/estoria.component.html',
+            styleUrls: ['app/estoria.component.css']
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [estoria_service_1.EstoriaService])
+    ], EstoriaComponent);
+    return EstoriaComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.EstoriaComponent = EstoriaComponent;
+//# sourceMappingURL=estoria.component.js.map

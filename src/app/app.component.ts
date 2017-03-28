@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
     template: `
       <nav>
         <div class="nav-wrapper">
-          <a class="brand-logo">{{titulo}}</a>          
+          <a class="brand-logo center">{{titulo}}</a>          
         </div>
       </nav>
       <div class="container">
-        <acervo></acervo>
+        <estoria></estoria>
       </div>`,
 })
 export class AppComponent {

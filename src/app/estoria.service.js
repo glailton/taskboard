@@ -8,25 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
 var estoria_mock_1 = require('./estoria.mock');
-var tarefas_mock_1 = require('./tarefas.mock');
-var AcervoComponent = (function () {
-    function AcervoComponent() {
+var core_1 = require('@angular/core');
+var EstoriaService = (function () {
+    function EstoriaService() {
     }
-    AcervoComponent.prototype.ngOnInit = function () {
-        this.acervo = estoria_mock_1.ACERVO;
-        this.tarefas = tarefas_mock_1.TAREFAS;
+    EstoriaService.prototype.getEstorias = function () {
+        return estoria_mock_1.ESTORIA;
     };
-    AcervoComponent = __decorate([
-        core_1.Component({
-            selector: 'acervo',
-            templateUrl: 'app/acervo.component.html',
-            styleUrls: ['app/acervo.component.css']
-        }), 
+    EstoriaService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AcervoComponent);
-    return AcervoComponent;
+    ], EstoriaService);
+    return EstoriaService;
 }());
-exports.AcervoComponent = AcervoComponent;
-//# sourceMappingURL=acervo.component.js.map
+exports.EstoriaService = EstoriaService;
+//# sourceMappingURL=estoria.service.js.map

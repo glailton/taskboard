@@ -1,8 +1,8 @@
-import {Tarefa} from './tarefas';
+import {Tarefas} from './tarefas';
 
 export class Estoria {
     titulo: string;
     descricao: string;
     pontos: number;
- //   tarefas: Tarefa[];
+    tarefas: Tarefas[];
 }

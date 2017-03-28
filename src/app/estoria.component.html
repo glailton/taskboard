@@ -1,4 +1,4 @@
-<div class="row" *ngFor="let estoria of acervo">
+<div class="row" *ngFor="let estoria of estorias">
     <div class="col s12 m6">
         <div class="card small">
             <div class="card-content">
@@ -8,7 +8,7 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <ul *ngFor="let tarefa of tarefas">
+                <ul *ngFor="let tarefa of estoria.tarefas">
                     <li>{{tarefa.titulo}} : {{tarefa.descricao}}</li>
                 </ul>
                 <form class="col s12">
