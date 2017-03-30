@@ -12,9 +12,13 @@ var estoria_mock_1 = require('./estoria.mock');
 var core_1 = require('@angular/core');
 var EstoriaService = (function () {
     function EstoriaService() {
+        this.estorias = estoria_mock_1.ESTORIA;
     }
     EstoriaService.prototype.getEstorias = function () {
         return estoria_mock_1.ESTORIA;
+    };
+    EstoriaService.prototype.cadastrarTarefas = function (tarefa) {
+        this.estoria.tarefas.push(tarefa);
     };
     EstoriaService = __decorate([
         core_1.Injectable(), 

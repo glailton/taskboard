@@ -12,16 +12,18 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_component_1 = require('./app/app.component');
-var acervo_component_1 = require('./app/acervo.component');
+var estoria_component_1 = require('./app/estoria.component');
 var forms_1 = require('@angular/forms');
+var estoria_service_1 = require('./app/estoria.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, acervo_component_1.AcervoComponent],
-            bootstrap: [app_component_1.AppComponent]
+            declarations: [app_component_1.AppComponent, estoria_component_1.EstoriaComponent],
+            bootstrap: [app_component_1.AppComponent],
+            providers: [estoria_service_1.EstoriaService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

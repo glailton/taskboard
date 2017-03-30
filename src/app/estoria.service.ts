@@ -1,9 +1,19 @@
 import {ESTORIA} from './estoria.mock';
+import {Estoria} from './estoria';
+import {Tarefas} from './tarefas';
 import {Injectable} from '@angular/core';
 
 @Injectable() 
 export class EstoriaService{
+    estorias: Estoria[] = ESTORIA;
+    tarefa: Tarefas;
+    estoria: Estoria;
+
     getEstorias() {
         return ESTORIA;
+    }
+
+    cadastrarTarefas(tarefa:Tarefas){
+        this.estoria.tarefas.push(tarefa);
     }
 }

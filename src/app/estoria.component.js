@@ -16,6 +16,20 @@ var EstoriaComponent = (function () {
     }
     EstoriaComponent.prototype.ngOnInit = function () {
         this.estorias = this.estoriaService.getEstorias();
+        console.log("uma vez");
+    };
+    EstoriaComponent.prototype.cadastrarTarefas = function (estoria, id) {
+        //  this.estoriaService.cadastrarTarefas(tarefas)
+        //this.tarefas = estoria.tarefas;
+        // this.tarefas.push(estoria.tarefas)
+        this.estorias.forEach(function (est) {
+            if (est.id === id) {
+                estoria.tarefas.forEach(function (t) {
+                    est.tarefas.push(t);
+                });
+            }
+        });
+        console.log(this.estorias);
     };
     EstoriaComponent = __decorate([
         core_1.Component({

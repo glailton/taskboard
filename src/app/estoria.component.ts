@@ -13,10 +13,27 @@ import { EstoriaService } from './estoria.service';
 export class EstoriaComponent {
   estorias: Estoria[];
   tarefas: Tarefas[];
+  estoria: Estoria;
 
   constructor(private estoriaService: EstoriaService){ }
 
   ngOnInit() {
     this.estorias = this.estoriaService.getEstorias();
+    console.log("uma vez");
+  }
+
+  cadastrarTarefas(estoria: Estoria, id: number){
+  //  this.estoriaService.cadastrarTarefas(tarefas)
+   //this.tarefas = estoria.tarefas;
+   // this.tarefas.push(estoria.tarefas)
+   this.estorias.forEach(est => {
+     if(est.id === id){
+       estoria.tarefas.forEach(t => {
+         est.tarefas.push(t);
+       });
+       
+     }
+   });
+   console.log(this.estorias);
   }
 }
