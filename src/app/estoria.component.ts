@@ -22,11 +22,11 @@ export class EstoriaComponent {
     console.log("uma vez");
   }
 
-  cadastrarTarefas(estoria: Estoria, id: number){
+  cadastrarTarefas(tarefa: Tarefas, estoria: Estoria){
   //  this.estoriaService.cadastrarTarefas(tarefas)
    //this.tarefas = estoria.tarefas;
    // this.tarefas.push(estoria.tarefas)
-   this.estorias.forEach(est => {
+   /*this.estorias.forEach(est => {
      if(est.id === id){
        estoria.tarefas.forEach(t => {
          est.tarefas.push(t);
@@ -34,6 +34,13 @@ export class EstoriaComponent {
        
      }
    });
-   console.log(this.estorias);
+   console.log(this.estorias);*/
+
+   estoria.tarefas.push(tarefa);
+   
+  }
+
+  finalizarEstoria(estoria: Estoria){
+    this.estorias.splice(this.estorias.indexOf(estoria),1);
   }
 }

@@ -1,0 +1,341 @@
+/*normalize */
+html {
+  font-family: sans-serif, "Times New Roman", serif;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+img{
+  max-width: 100%;
+}
+
+body {
+  background-color: #DCDCDC;
+}
+
+/*normalize */
+
+#global {
+  color: #696969;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@font-face {
+    font-family: 'FontRobotoMedium';
+    src: url('fonts/Roboto-Medium.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'FontSlabo';
+    src: url('fonts/Slabo27px-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'FontGriffy';
+    src: url('fonts/Griffy-Regular.ttf') format('truetype'); 
+}
+
+header {
+  font-size: 2em;
+  border-width: 2px 0;
+  padding: 30px;
+  text-align: center;
+  font-variant: small-caps;  
+  background-color: #808080;
+  color: #FFFFFF;
+}
+
+footer {
+  text-align: center;      
+  font-style: italic;
+  padding: 0.25em;
+  text-align: center;
+  font-variant: small-caps;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.6em;
+}
+
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.8em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  background-color: #A9A9A9;
+  overflow: hidden;
+  color: white;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  width: 20%;
+  display: inline-block;
+  padding: 20px;
+  
+}
+
+nav ul li:hover {
+  background-color: #C0C0C0;
+  
+}
+nav li a {
+  font-variant: small-caps;
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  min-height: 25px;
+  display: inline-block;
+}
+
+p {
+  margin: 0.5em 0.25em;
+}
+
+#col1, #col2, #col3, #col4 {
+     background-color: #D3D3D3;
+     color: #696969;
+
+         box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 25%;
+    padding: 1em;      
+    float: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+#div-table {
+  overflow-x:auto;
+  overflow-y:auto;
+}
+
+div {
+  border: 1px solid white;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  #global {
+
+    font-family: FontSlabo;
+    
+  }
+
+  #col1, #col2, #col3, #col4 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 25%;
+    padding: 1em;      
+    float: left;
+  }
+
+}
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  #global {  
+    
+    font-family: FontSlabo;
+
+   }  
+
+  #col1, #col2, #col3, #col4 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 25%;
+    padding: 1em;      
+    float: left;
+  }
+    
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  #global {
+    font-family: FontRobotoMedium;
+    color: #8B4513;
+  }
+
+    #col1, #col2 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 50%;
+    padding: 1em;      
+    float: left;
+  }
+
+  #col3, #col4 {    
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 50%;
+    padding: 1em;      
+    float: left;
+  }
+
+  header {
+    background-color: #8B4513;
+    color: #FFDEAD;
+  }
+
+  nav ul {
+    background-color: #A0522D;
+    color: #FFDEAD;
+  }
+
+ nav ul li {
+   width: 19%;
+ }
+
+  nav ul li:hover {
+    background-color: #CD853F;
+  }
+  body {
+    background-color: #DAA520;
+  }
+
+  #col1, #col2, #col3, #col4 {
+     background-color: #DEB887;
+     color: #A0522D;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  #global {    
+    font-family: FontRobotoMedium;
+    color: #8B4513;
+  }
+
+  #col1, #col2 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 50%;
+    padding: 1em;
+    float: left;
+  }
+
+  #col3, #col4 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 50%;
+    padding: 1em;
+    float: left;
+  }
+
+    nav ul li {
+    text-align: center;
+    display: inline;
+    float: left;
+    width: 15%;
+  }
+
+  header {
+    background-color: #8B4513;
+    color: #FFDEAD;
+  }
+
+  nav ul {
+    background-color: #A0522D;
+    color: #FFDEAD;
+  }
+
+  nav ul li:hover {
+    background-color: #CD853F;
+  }
+
+  body {
+    background-color: #DAA520;
+  }
+
+  #col1, #col2, #col3, #col4 {
+     background-color: #DEB887;
+     color: #A0522D;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 381px) and (max-width: 480px) {
+  
+  #global {
+    font-family: FontRobotoMedium;
+  }
+  
+  #col1, #col2, #col3, #col4 {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid white;
+    width: 100%;
+    padding: 1em;      
+    float: none;
+  }
+
+nav ul li {
+   width: 13%;
+}
+
+  nav ul li {
+    text-align: left;
+    display: inline;
+    float: left;
+    font-size: 14px;
+  }
+}

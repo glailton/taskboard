@@ -2,28 +2,34 @@
     <div class="col s12 m6">
         <div class="card small">
             <div class="card-content">
+                <a class="waves-effect waves-light red btn right" (click)="finalizarEstoria(estoria)">Finalizar</a>
                 <span class="card-title activator grey-text text-darken-4">{{estoria.titulo }}</span>
+                <p></p>
+                <p></p>
                 <p><span class="new badge red" data-badge-caption="">{{estoria.pontos}} Pontos</span>{{estoria.descricao}}.</p>
+                <p></p>
                 <p><a class="activator" href="#">Tarefas</a></p>
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                 <ul *ngFor="let tarefa of estoria.tarefas">
-                    <li>{{tarefa.titulo}} : {{tarefa.descricao}}</li>
+                    <li>Titulo: {{tarefa.titulo}}</li>
+                    <li>Descrição: {{tarefa.descricao}}</li>
                 </ul>
-                <form class="col s12">
+                <form class="col s12" #tarefaForm="ngForm">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="first_name" type="text" class="validate" [(ngModel)]="estoria.tarefas.titulo" name="first_name">
+                            <input id="first_name" type="text" class="validate" [(ngModel)]="titulo" name="first_name">
                             <label for="first_name">Nova Tarefa</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" [(ngModel)]="estoria.tarefas.descricao" name="last_name">
+                            <input id="last_name" type="text" class="validate" [(ngModel)]="descricao" name="last_name">
                             <label for="last_name">Descrição</label>
                         </div>
                     </div>
                     <div class="row">
-                        <a class="waves-effect waves-light blue btn" (click)="cadastrarTarefas(estoria, estoria.id)">Adicionar Tarefa</a>
+                        <a class="waves-effect waves-light blue btn" (click)="cadastrarTarefas({titulo: titulo, descricao:descricao},estoria); 
+                        tarefaForm.reset()">Adicionar Tarefa</a>
                     </div>
                 </form>
             </div>

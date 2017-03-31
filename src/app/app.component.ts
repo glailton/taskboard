@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     template: `
       <nav>
         <div class="nav-wrapper">
-          <a class="brand-logo center">{{titulo}}</a>          
+          <a class="brand-logo black-text lighten-2">{{titulo}}</a>          
         </div>
       </nav>
       <div class="container">
