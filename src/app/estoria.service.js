@@ -17,8 +17,11 @@ var EstoriaService = (function () {
     EstoriaService.prototype.getEstorias = function () {
         return estoria_mock_1.ESTORIA;
     };
-    EstoriaService.prototype.cadastrarTarefas = function (tarefa) {
-        this.estoria.tarefas.push(tarefa);
+    EstoriaService.prototype.cadastrarTarefas = function (tarefa, estoria) {
+        estoria.tarefas.push(tarefa);
+    };
+    EstoriaService.prototype.finalizarEstoria = function (estoria) {
+        this.estorias.splice(this.estorias.indexOf(estoria), 1);
     };
     EstoriaService = __decorate([
         core_1.Injectable(), 

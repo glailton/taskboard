@@ -13,7 +13,11 @@ export class EstoriaService{
         return ESTORIA;
     }
 
-    cadastrarTarefas(tarefa:Tarefas){
-        this.estoria.tarefas.push(tarefa);
+    cadastrarTarefas(tarefa:Tarefas, estoria: Estoria){
+        estoria.tarefas.push(tarefa);
     }
+
+    finalizarEstoria(estoria: Estoria){
+    this.estorias.splice(this.estorias.indexOf(estoria),1);
+  }
 }

@@ -23,24 +23,10 @@ export class EstoriaComponent {
   }
 
   cadastrarTarefas(tarefa: Tarefas, estoria: Estoria){
-  //  this.estoriaService.cadastrarTarefas(tarefas)
-   //this.tarefas = estoria.tarefas;
-   // this.tarefas.push(estoria.tarefas)
-   /*this.estorias.forEach(est => {
-     if(est.id === id){
-       estoria.tarefas.forEach(t => {
-         est.tarefas.push(t);
-       });
-       
-     }
-   });
-   console.log(this.estorias);*/
-
-   estoria.tarefas.push(tarefa);
-   
+   this.estoriaService.cadastrarTarefas(tarefa, estoria);   
   }
 
   finalizarEstoria(estoria: Estoria){
-    this.estorias.splice(this.estorias.indexOf(estoria),1);
+    this.estoriaService.finalizarEstoria(estoria);
   }
 }

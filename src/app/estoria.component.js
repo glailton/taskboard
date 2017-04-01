@@ -19,22 +19,10 @@ var EstoriaComponent = (function () {
         console.log("uma vez");
     };
     EstoriaComponent.prototype.cadastrarTarefas = function (tarefa, estoria) {
-        //  this.estoriaService.cadastrarTarefas(tarefas)
-        //this.tarefas = estoria.tarefas;
-        // this.tarefas.push(estoria.tarefas)
-        /*this.estorias.forEach(est => {
-          if(est.id === id){
-            estoria.tarefas.forEach(t => {
-              est.tarefas.push(t);
-            });
-            
-          }
-        });
-        console.log(this.estorias);*/
-        estoria.tarefas.push(tarefa);
+        this.estoriaService.cadastrarTarefas(tarefa, estoria);
     };
     EstoriaComponent.prototype.finalizarEstoria = function (estoria) {
-        this.estorias.splice(this.estorias.indexOf(estoria), 1);
+        this.estoriaService.finalizarEstoria(estoria);
     };
     EstoriaComponent = __decorate([
         core_1.Component({
